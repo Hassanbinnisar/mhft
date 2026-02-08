@@ -1,0 +1,175 @@
+/* --- General Reset --- */
+.nav-wrapper {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+/* --- Hamburger Logic (Desktop pe hide) --- */
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* --- Navigation Links --- */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* --- Logo --- */
+.logo-div {
+    flex: 0;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+/* --- Icons --- */
+.nav-right-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+    flex: 1;
+}
+
+.nav-icon {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* --- Search Modal (MHFT Style) --- */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.search-box-card {
+    background: #fff;
+    width: 95%;
+    max-width: 850px;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 12px;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.search-input-group input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.clear-btn { font-size: 11px; font-weight: 800; cursor: pointer; }
+
+.search-tags {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-tag {
+    background: #000;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Results Grid */
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.res-item { text-decoration: none; color: #000; }
+.res-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: #f0f0f0; }
+.res-title { font-size: 10px; font-weight: 700; margin-top: 8px; text-transform: uppercase; }
+.res-price { font-size: 11px; color: #555; }
+
+/* --- Mobile View Adjustments --- */
+@media (max-width: 1100px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; flex: 1; }
+    .logo-div { flex: 1; display: flex; justify-content: center; }
+    .nav-right-icons { flex: 1; }
+    .res-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Sidebar Styles */
+.mobile-sidebar {
+    position: fixed;
+    top: 0; left: 0; width: 280px; height: 100%;
+    background: #fff; z-index: 3000;
+    padding: 30px;
+}
+
+.sidebar-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2999;
+}
+
+.sidebar-links a {
+    display: block; padding: 15px 0; border-bottom: 1px solid #eee;
+    color: #000; font-weight: 700; text-decoration: none;
+}
