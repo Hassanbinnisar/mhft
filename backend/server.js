@@ -265,7 +265,7 @@ if (!fs.existsSync(uploadDir)) {
 
 // --- 2. MIDDLEWARE & CORS ---
 app.use(cors({
-    origin: ["https://mhft-c1ra.vercel.app", "http://localhost:5173"], // Frontend live + local
+    origin: ["https://mhft.vercel.app", "http://localhost:5173"], // Frontend live + local
     credentials: true
 }));
 app.use(express.json());
