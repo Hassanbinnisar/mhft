@@ -13,7 +13,7 @@ const ProductDetail = ({ addToCart }) => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
     
-    axios.get(`http://localhost:5000/api/products/${id}`)
+    axios.get(`https://mhft-production.up.railway.app/api/products/${id}`)
       .then(res => {
         setProduct(res.data);
         setSelectedImage(res.data.image);

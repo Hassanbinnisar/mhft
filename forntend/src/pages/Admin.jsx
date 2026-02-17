@@ -29,8 +29,10 @@ const Admin = () => {
 
   const fetchData = async () => {
     try {
-      const ord = await axios.get('http://localhost:5000/api/orders');
-      const prd = await axios.get('http://localhost:5000/api/products');
+      // const ord = await axios.get('http://localhost:5000/api/orders');
+      // const prd = await axios.get('http://localhost:5000/api/products');
+      const ord = await axios.get('https://mhft-production.up.railway.app/api/orders');
+      const prd = await axios.get('https://mhft-production.up.railway.app/api/products');
       setOrders(ord.data.reverse()); 
       setProducts(prd.data);
     } catch (err) { console.log("Data fetch error!"); }
@@ -52,7 +54,7 @@ const Admin = () => {
     });
 
     try {
-      await axios.post('http://localhost:5000/api/products', fd, {
+      await axios.post('https://mhft-production.up.railway.app/api/products', fd, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       alert("Product added successfully with " + status + " tag! 🔥");
@@ -66,14 +68,14 @@ const Admin = () => {
 
   const deleteProduct = async (id) => {
     if (window.confirm("Hassan bhai, delete kar doon?")) {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://mhft-production.up.railway.app/api/products/${id}`);
       fetchData();
     }
   };
 
   const completeOrder = async (id) => {
     if (window.confirm("Order complete ho gaya? List se hata doon?")) {
-      await axios.delete(`http://localhost:5000/api/orders/${id}`);
+      await axios.delete(`https://mhft-production.up.railway.app/api/orders/${id}`);
       fetchData();
     }
   };
