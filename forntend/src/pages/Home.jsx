@@ -14,7 +14,7 @@ function Home({ addToCart }) {
 
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get('https://mhft-production.up.railway.app/api/products');
         setProducts(res.data);
       } catch (err) {
         console.error("Products load nahi ho sakay", err);
