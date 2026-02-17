@@ -103,7 +103,7 @@ export default function App() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products').then(res => setProducts(res.data));
+    axios.get('https://mhft-production.up.railway.app/api/products').then(res => setProducts(res.data));
   }, []);
 
   const updateQty = (idx, delta) => {
