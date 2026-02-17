@@ -102,10 +102,14 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    axios.get('https://mhft-production.up.railway.app/api/products').then(res => setProducts(res.data));
-  }, []);
-
+useEffect(() => {
+  axios.get('https://mhft-production.up.railway.app/api/products')
+    .then(res => {
+      console.log("Products Loaded:", res.data); // Console check karein
+      setProducts(res.data);
+    })
+    .catch(err => console.log("Fetch Error:", err));
+}, []);
   const updateQty = (idx, delta) => {
     const newCart = [...cart];
     newCart[idx].qty = Math.max(1, (newCart[idx].qty || 1) + delta);
