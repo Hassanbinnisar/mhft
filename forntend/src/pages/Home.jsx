@@ -82,8 +82,7 @@ function Home({ addToCart }) {
       {/* Naya Graphic Banner Section */}
       <div style={s.heroBanner}>
         <img 
-        src="/images/banner.png"
-           // Public folder mein banner.jpg rakhein ya naya link dalain
+          src="/images/banner.png" // Public folder mein banner.jpg rakhein ya naya link dalain
           alt="Premium Dropshoulder T-Shirts" 
           style={s.heroImg} 
         />
