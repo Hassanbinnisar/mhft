@@ -17,6 +17,7 @@ function Home({ addToCart }) {
         const res = await axios.get('https://mhft-production.up.railway.app/api/products');
         setProducts(res.data);
       } catch (err) {
+        
         console.error("Products load nahi ho sakay", err);
       }
     };
