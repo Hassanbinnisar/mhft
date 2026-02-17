@@ -217,7 +217,15 @@ app.post('/api/orders', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
-
+app.get('/api/products/:id', async (req, res) => {
+    try {
+        const product = await Product.findById(req.params.id);
+        if (!product) return res.status(404).json({ message: "Product nahi mila!" });
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ message: "Server error!" });
+    }
+});
 app.get('/api/orders', async (req, res) => {
     try {
         const orders = await Order.find().sort({ date: -1 });
