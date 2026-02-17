@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiOutlineX, HiOutlineTrash, HiPlus, HiMinus } from 'react-icons/hi'; 
 
 // Components & Pages
-import Navbar from './components/Navbar'; 
-import Admin from './pages/Admin'; 
-import CategoryPage from './pages/CategoryPage'; 
-import ProductDetail from './components/ProductDetail'; 
-import Footer from './components/Footer';
-import AnnouncementBar from './components/AnnouncementBar';
-import Home from './pages/Home'; 
-import Checkout from './pages/Checkout'; 
-import CatalogPage from './pages/CatalogPage';
+import Navbar from './components/Navbar.jsx'; 
+import Admin from './pages/Admin.jsx'; 
+import CategoryPage from './pages/CategoryPage.jsx'; 
+import ProductDetail from './components/ProductDetail.jsx'; 
+import Footer from './components/Footer.jsx';
+import AnnouncementBar from './components/AnnouncementBar.jsx';
+import Home from './pages/Home.jsx'; 
+import Checkout from './pages/Checkout.jsx'; 
+import CatalogPage from './pages/CatalogPage.jsx';
 const AppContent = ({ products, cart, setCart, open, setOpen, addToCart, updateQty, total }) => {
   const location = useLocation();
   
