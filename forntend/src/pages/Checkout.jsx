@@ -48,7 +48,7 @@ const Checkout = ({ cart, total, clearCart }) => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/orders', orderData);
+      const res = await axios.post('https://mhft-production.up.railway.app/api/orders', orderData);
       
       if (res.status === 201) {
         alert('Order Placed Successfully! ✅');

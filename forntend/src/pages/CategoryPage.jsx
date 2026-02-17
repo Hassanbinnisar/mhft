@@ -10,7 +10,7 @@ const CategoryPage = ({ categoryTitle, addToCart }) => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get('https://mhft-production.up.railway.app/api/products');
         
         // HASSAN BHAI: Yeh flexible filter hai jo spelling aur case (S/s) handle karega
         const filtered = res.data.filter(p => 
