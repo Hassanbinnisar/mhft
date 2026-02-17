@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineSearch, HiOutlineX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
-import './Navbar.css';
+import './navbar.css';
 
 
 const Navbar = ({ products }) => {
